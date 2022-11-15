@@ -13,7 +13,11 @@ type Period struct {
 	Days   int
 }
 
-func (p *Period) Between(start, end time.Time) {
+func newPeriod(years, months, days int) Period {
+	return Period{years, months, days}
+}
+
+func Between(start, end time.Time) Period {
 	startYear, startMonth, startDay := start.Date()
 	endYear, endMonth, endDay := end.Date()
 
@@ -38,9 +42,7 @@ func (p *Period) Between(start, end time.Time) {
 	var years = totalMonths / 12
 	var months = totalMonths % 12
 
-	p.Years = years
-	p.Months = months
-	p.Days = days
+	return newPeriod(years, months, days)
 }
 
 func getProlepticMonth(year, month int) int {
