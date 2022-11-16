@@ -52,8 +52,7 @@ func getProlepticMonth(year, month int) int {
 func toEpochDay(year, month, day int) int {
 	var y = year
 	var m = month
-	var total = 0
-	total += 365 * y
+	var total = 365 * y
 	if y >= 0 {
 		total += (y+3)/4 - (y+99)/100 + (y+399)/400
 	} else {
