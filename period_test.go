@@ -17,7 +17,7 @@ func TestBetween(t *testing.T) {
 	)
 
 	if p.Years != expectedYear || p.Months != expectedMonth || p.Days != expectedDay {
-		t.Fatalf("expected period is not wrong\n"+
+		t.Fatalf("expected period is different from got period\n"+
 			"expected: %d year, %d month and %d day\ngot: %d year, %d month and %d day\n",
 			expectedYear, expectedMonth, expectedDay, p.Years, p.Months, p.Days)
 	}
