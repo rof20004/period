@@ -40,5 +40,15 @@ func main() {
 ```shell
 go test -v --bench . --benchmem
 ```
+```shell
+=== RUN   TestBetween
+--- PASS: TestBetween (0.00s)
+goos: darwin
+goarch: arm64
+pkg: github.com/rof20004/period
+BenchmarkBetween
+BenchmarkBetween-8   	52255380	        22.62 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/rof20004/period	2.469s
 
-![img.png](test_results.png)
+```
