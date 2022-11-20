@@ -31,7 +31,7 @@ func main() {
 
 	p := period.Between(birthDate, time.Now())
 
-	fmt.Printf("You have %d years, %d months e %d days\n", p.Years, p.Months, p.Days)
+	fmt.Printf("You have %d years, %d months and %d days\n", p.Years, p.Months, p.Days)
 }
 ```
 
